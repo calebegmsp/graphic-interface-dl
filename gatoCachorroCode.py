@@ -11,10 +11,10 @@ from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 from keras.preprocessing import image
 
-acuracia = 0.999
+acuracia = 0.6514
 
 def treaining_and_test (training_set, test_set):
-    #try:
+    try:
         if (training_set != '/' and test_set != '/'):
             classificador = Sequential()
             classificador.add(Conv2D(32, (3,3), input_shape = (64, 64, 3), activation = 'relu'))
@@ -63,4 +63,4 @@ def treaining_and_test (training_set, test_set):
             return acuracia;
         else:
             return -1
-    #except: return -2
+    except: return -2

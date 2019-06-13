@@ -5,7 +5,6 @@ Created on Mon Jun 10 08:43:58 2019
 @author: caleb
 """
 
-import os
 from tkinter import filedialog
 from tkinter import *
 import gatoCachorroCode
@@ -37,7 +36,7 @@ class Janela:
                         text = 'Este programa treina uma CNN para reconhecimento de gatos e cachorros',
                         font=('Verdana','16'))
         self.infor=Label(self.frame,
-                        text = 'O resultado da acurácia aparecerá aqui.',
+                        text = '...',
                         font=('Verdana','14','bold'))
         self.msg.focus_force()
         self.msg.pack(pady = 20)
@@ -98,7 +97,7 @@ class Janela:
         elif(start == -2):
             self.infor.config(text='Houve um erro ao carregar os arquivos.', foreground = 'red')
         else:
-            self.infor.config(text= 'Acurácia  = ' + str(start), foreground = 'red')
+            self.infor.config(text= 'Treinamento bem sucedido!', foreground = 'red')
         
     
         
